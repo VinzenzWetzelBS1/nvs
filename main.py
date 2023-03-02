@@ -11,6 +11,7 @@ class Lehrer:
             schueler.noten[fach].append(note)
 
 class Schueler:
+
     noten = {
         "deutsch": [],
         "mathe": []
@@ -45,8 +46,21 @@ class Zeugnis:
         print(f"Erreicht wurde dies in der Schule: {self.schulname}")
 
 
+def getDialogAntwort():
+    try:
+        print("1. Lehrer anlegen")
+        print("2. Schüler anlegen")
+        print("3. Schüler benoten")
+        print("4. Zeugnis erstellen")
+        antwort = int(input("Wählen Sie eine Option: "))
+        return antwort
+    except Exception:
+        print("Error bei Eingabe.")
+        return -1
+
 schueler1 = Schueler("Vinzenz", "Wetzel")
 lehrer1 = Lehrer("Markus", "Scherg", ["deutsch", "mathe"])
+zeugnis = Zeugnis("Berufsschule 1 Bayreuth")
 
 lehrer1.benoten(schueler1, "deutsch", 2)
 lehrer1.benoten(schueler1, "deutsch", 1)
@@ -57,5 +71,24 @@ lehrer1.benoten(schueler1, "mathe", 1)
 lehrer1.benoten(schueler1, "mathe", 1)
 lehrer1.benoten(schueler1, "mathe", 5)
 
-zeugnis = Zeugnis("Berufsschule 1 Bayreuth")
-zeugnis.erstelleZeugnis(schueler1)
+dialogAntwort = -1
+while dialogAntwort > 4 or dialogAntwort <= 0:
+    dialogAntwort = getDialogAntwort()
+
+match dialogAntwort:
+    case 1:
+        pass
+    case 2:
+        pass
+    case 3:
+        pass
+    case 4:
+        zeugnis.erstelleZeugnis(schueler1)
+
+
+
+
+
+
+
+
