@@ -1,4 +1,5 @@
 class Lehrer:
+    #comment
     def __init__(self, vorname, nachname, unterrichtsfaecher):
         self.vorname = vorname
         self.nachname = nachname
