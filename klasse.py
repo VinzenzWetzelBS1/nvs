@@ -1,10 +1,10 @@
 class Klasse:
 
-    def __init__(self, name, raum=0, schueler_list=None, klassenlehrer=None):
+    def __init__(self, name):
         self.name = name
-        self.raum = raum
-        self.schueler_list = schueler_list
-        self.klassenlehrer = klassenlehrer
+        self.raum = None
+        self.schueler_list = []
+        self.klassenlehrer = None
 
     def add_schueler(self, schueler):
         schueler.klassen_name = self.name
