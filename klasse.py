@@ -6,12 +6,6 @@ class Klasse:
         self.schueler_list = schueler_list
         self.klassenlehrer = klassenlehrer
 
-    def set_raum(self, name):
-        self.raum = name
-
-    def set_klassenlehrer(self, lehrer):
-        self.klassenlehrer = lehrer
-
     def add_schueler(self, schueler):
         schueler.klassen_name = self.name
         self.schueler_list.append(schueler)

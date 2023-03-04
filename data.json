@@ -1,108 +1,14 @@
 {
   "schueler": [
     {
-      "vorname": "Vinzenz",
-      "nachname": "Wetzel",
-      "username": "dasevoli",
-      "passwort": "password",
+      "vorname": "Leon",
+      "nachname": "Anders",
+      "username": "LeAn1",
       "noten_collection": {
         "noten": [
-          {
-            "fach": "Deutsch",
-            "wert": 2,
-            "gewichtung": 1.0
-          },
-          {
-            "fach": "Englisch",
-            "wert": 3,
-            "gewichtung": 1.0
-          },
-          {
-            "fach": "Mathe",
-            "wert": 1,
-            "gewichtung": 1.0
-          }
-        ]
-      },
-      "klassen_name": "ITG10B"
-    },
-    {
-      "vorname": "Peter",
-      "nachname": "Mueller",
-      "username": "mueller95",
-      "passwort": "password",
-      "noten_collection": {
-        "noten": [
-          {
-            "fach": "Deutsch",
-            "wert": 4,
-            "gewichtung": 1.0
-          },
-          {
-            "fach": "Englisch",
-            "wert": 1,
-            "gewichtung": 1.0
-          },
           {
             "fach": "Mathe",
             "wert": 2,
-            "gewichtung": 1.0
-          }
-        ]
-      },
-      "klassen_name": "ITG10B"
-    },
-    {
-      "vorname": "Lisa",
-      "nachname": "Gross",
-      "username": "Lisa123",
-      "passwort": "password",
-      "noten_collection": {
-        "noten": [
-          {
-            "fach": "Deutsch",
-            "wert": 1,
-            "gewichtung": 1.0
-          },
-          {
-            "fach": "Englisch",
-            "wert": 1,
-            "gewichtung": 1.0
-          },
-          {
-            "fach": "Mathe",
-            "wert": 1,
-            "gewichtung": 1.0
-          }
-        ]
-      },
-      "klassen_name": "ITG10C"
-    },
-    {
-      "vorname": "Lara",
-      "nachname": "Schmidt",
-      "username": "lara123",
-      "noten_collection": {
-        "noten": [
-          {
-            "fach": "Mathe",
-            "wert": 3,
-            "gewichtung": 1.0
-          }
-        ]
-      },
-      "klassen_name": null,
-      "passwort": null
-    },
-    {
-      "vorname": "Lara",
-      "nachname": "Schmidt",
-      "username": "lara123",
-      "noten_collection": {
-        "noten": [
-          {
-            "fach": "Englisch",
-            "wert": 3,
             "gewichtung": 1.0
           }
         ]
@@ -111,42 +17,6 @@
       "passwort": null
     }
   ],
-  "lehrer": [
-    {
-      "vorname": "Markus",
-      "nachname": "Scherg",
-      "username": "MSch",
-      "passwort": "passwort"
-    }
-  ],
-  "klassen": [
-    {
-      "name": "ITG10B",
-      "raum": "169",
-      "schueler_list": [
-        {
-          "vorname": "Lara",
-          "nachname": "Schmidt",
-          "username": "lara123",
-          "noten_collection": {
-            "noten": [
-              {
-                "fach": "Englisch",
-                "wert": 3,
-                "gewichtung": 1.0
-              }
-            ]
-          },
-          "klassen_name": null,
-          "passwort": null
-        }
-      ],
-      "klassenlehrer": {
-        "vorname": "Markus",
-        "nachname": "Scherg",
-        "username": "MSch",
-        "passwort": "passwort"
-      }
-    }
-  ]
+  "lehrer": [],
+  "klassen": []
 }

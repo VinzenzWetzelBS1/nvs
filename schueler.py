@@ -11,8 +11,5 @@ class Schueler:
         self.klassen_name = klassen_name
         self.passwort = passwort
 
-    def change_klassen_name(self, name):
-        self.klassen_name = name
-
     def benoten(self, note):
         self.noten_collection.noten.append(note)

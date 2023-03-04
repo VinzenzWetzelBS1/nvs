@@ -1,4 +1,5 @@
 import json
+import os
 from klasse import Klasse
 from lehrer import Lehrer
 from schueler import Schueler
@@ -10,7 +11,16 @@ class NvsJsonController:
 
     def __init__(self, file_name):
         self.file_name = file_name
-        self.loaded_object = json.load(open(file_name))
+        if os.stat(file_name).st_size == 0:
+            # File is empty
+            self.loaded_object = {
+                "schueler": [],
+                "lehrer": [],
+                "klassen": []
+            }
+        else:
+            f = open(file_name)
+            self.loaded_object = json.load(f)
 
     def save_object_to_file(self):
         try:
@@ -46,24 +56,6 @@ class NvsJsonController:
                 self.save_object_to_file()
                 return
         self.loaded_object["klasse"].append(klasse)
-        self.save_object_to_file()
-
-    def update_lehrer(self, lehrer):
-        pass
-
-    def update_klasse(self, klasse):
-        pass
-
-    def update_all_schueler(self, schueler_list):
-        self.loaded_object["schueler"] = schueler_list
-        self.save_object_to_file()
-
-    def update_all_lehrer(self, lehrer_list):
-        self.loaded_object["lehrer"] = lehrer_list
-        self.save_object_to_file()
-
-    def update_all_klassen(self, klassen_list):
-        self.loaded_object["klassen"] = klassen_list
         self.save_object_to_file()
 
     def get_schueler(self, username):
@@ -122,7 +114,8 @@ class NvsJsonController:
             noten = []
             for note in item["noten_collection"]["noten"]:
                 noten.append(Note(note['fach'], note['wert'], note['gewichtung']))
-            new_schueler.noten_collection = NotenCollection(noten)
+            new_schueler.noten_collection = NotenCollection()
+            new_schueler.noten_collection.noten = noten
             schueler_list.append(new_schueler)
         return schueler_list
 
@@ -153,5 +146,4 @@ class NvsJsonController:
                 new_schueler.noten_collection = NotenCollection(noten)
                 schueler_list.append(new_schueler)
             new_klasse.schueler_list = schueler_list
-
         return klassen_list
