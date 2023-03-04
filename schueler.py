@@ -13,3 +13,9 @@ class Schueler:
 
     def benoten(self, note):
         self.noten_collection.noten.append(note)
+
+    def get_klasse(self, klassen):
+        for klasse in klassen:
+            if klasse.name == self.klassen_name:
+                return klasse
+        return None

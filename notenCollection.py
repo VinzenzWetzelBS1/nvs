@@ -15,9 +15,9 @@ class NotenCollection:
         # TODO
         pass
 
-    def add_note(self, fach, wert, gewichtung):
-        self.noten.append(Note(fach, wert, gewichtung))
+    def add_note(self, note):
+        self.noten.append(note)
 
-    def remove_note(self, fach, wert, gewichtung):
+    def remove_note(self, note):
         # TODO
         pass

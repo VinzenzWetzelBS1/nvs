@@ -9,3 +9,6 @@ class Klasse:
     def add_schueler(self, schueler):
         schueler.klassen_name = self.name
         self.schueler_list.append(schueler)
+
+    def get_all_schueler(self):
+        return self.schueler_list
